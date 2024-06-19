@@ -1,3 +1,7 @@
 1.	Convert Dataset to SQL Database: - Create SQL statements to define and populate tables for menu_details and order_details using the provided dataset.
+
 CREATE TABLE menu_details ( menu_id INT PRIMARY KEY, item_name NVARCHAR(100) NOT NULL,price DECIMAL(10, 2) NOT NULL, category NVARCHAR(50) );
+
 CREATE TABLE order_details ( order_id INT PRIMARY KEY, menu_id INT FOREIGN KEY REFERENCES menu_details(menu_id), quantity INT NOT NULL, order_date DATETIME NOT NULL, order_details_id INT );
+
+
